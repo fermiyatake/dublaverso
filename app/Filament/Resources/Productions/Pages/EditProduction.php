@@ -16,4 +16,14 @@ class EditProduction extends EditRecord
             DeleteAction::make(),
         ];
     }
+
+    public function getContentTabLabel(): ?string
+    {
+        return 'Geral';
+    }
+
+    public function hasCombinedRelationManagerTabsWithContent(): bool
+    {
+        return true;
+    }
 }

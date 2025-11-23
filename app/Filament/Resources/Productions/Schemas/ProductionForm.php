@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Productions\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\SpatieTagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
@@ -24,6 +25,8 @@ class ProductionForm
                                 TextInput::make('title')
                                     ->label('Título')
                                     ->required(),
+                                TextInput::make('original_title')
+                                    ->label('Título Original'),
                             ]),
                         Grid::make(2)
                             ->schema([
@@ -53,17 +56,21 @@ class ProductionForm
                                             ->label('Nome')
                                             ->required()
                                     ]),
-                                Select::make('interests')
-                                    ->relationship('interests', 'name')
-                                    ->label('Interesses')
+                                Select::make('studios')
+                                    ->relationship('studios', 'name')
+                                    ->label('Estúdios')
                                     ->searchable()
                                     ->multiple()
+                                    ->required()
                                     ->createOptionForm([
                                         TextInput::make('name')
                                             ->label('Nome')
                                             ->required()
                                     ]),
                             ]),
+                        SpatieTagsInput::make('tags')
+                            ->label('Interesses')
+                            ->placeholder(null),
                         Textarea::make('synopsis')
                             ->label('Sinopse')
                             ->columnSpanFull(),

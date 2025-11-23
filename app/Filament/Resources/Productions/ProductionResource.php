@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Productions;
 use App\Filament\Resources\Productions\Pages\CreateProduction;
 use App\Filament\Resources\Productions\Pages\EditProduction;
 use App\Filament\Resources\Productions\Pages\ListProductions;
+use App\Filament\Resources\Productions\RelationManagers\BlocksRelationManager;
 use App\Filament\Resources\Productions\Schemas\ProductionForm;
 use App\Filament\Resources\Productions\Tables\ProductionsTable;
 use App\Models\Production;
@@ -39,7 +40,7 @@ class ProductionResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            BlocksRelationManager::class
         ];
     }
 

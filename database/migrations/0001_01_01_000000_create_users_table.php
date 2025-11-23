@@ -39,6 +39,7 @@ return new class extends Migration
 
         User::create([
             'email' => 'admin@admin.com',
+            'name' => 'admin',
             'password' => bcrypt('admin')
         ]);
     }

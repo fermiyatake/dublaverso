@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\Blocks\Pages;
+namespace App\Filament\Resources\Productions\Resources\Blocks\Pages;
 
-use App\Filament\Resources\Blocks\BlockResource;
+use App\Filament\Resources\Productions\Resources\Blocks\BlockResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
